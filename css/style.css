@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #000000;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.nav.nav-tabs .nav-link {
+  color: #000000;
+}
+
+.nav.nav-tabs .nav-link.active {
+  color: #dd2aed;
+}
+
+.logout:hover {
+  font-weight: 500;
+}

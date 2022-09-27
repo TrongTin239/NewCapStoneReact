@@ -1,0 +1,278 @@
+@import "../Base/base";
+@import "../Themes/variable";
+
+#button {
+  display: inline-block;
+  background-color: #ff9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  &::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  &:active {
+    background-color: #555;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+header {
+  background-color: $c1-bg-c;
+  .container {
+    color: $c1-text-c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px 10px 24px;
+    .logo {
+    }
+    .header-right {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+      align-items: center;
+      .icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .login {
+        a {
+          color: $c1-text-c;
+
+          opacity: 0.7;
+          font-size: $c1-text-s;
+          font-weight: $c1-text-w;
+          transition: all 0.3s;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+      .register {
+        a {
+          color: $c1-text-c;
+          opacity: 0.7;
+          font-size: $c1-text-s;
+          font-weight: $c1-text-w;
+          transition: all 0.3s;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+.menu {
+  .navbar {
+    // padding-left: 140px;
+    .navbar-nav {
+      .nav-item {
+        margin-right: 20px;
+        display: inline-block;
+        position: relative;
+
+        .nav-link {
+          opacity: 0.7;
+
+          &:hover {
+            color: $c2-text-c;
+            opacity: 1;
+            transition: width 0.5s;
+            &::after {
+              display: block;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: $c1-bg-c;
+            bottom: 0;
+            left: 0px;
+            display: none;
+            transition: width 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel {
+  // background-image: url("../../img/image\ 6.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: bottom;
+  position: relative;
+  height: 500px;
+  .carousel-inner {
+    position: relative;
+    .carousel-item {
+      position: relative;
+      height: 500px;
+      img {
+        @media screen and (max-width:768px) {
+          width: 400px;
+        }
+        @media screen and (max-width:600px) {
+          width: 300px;
+        }
+      }
+      .item-info {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        right: 200px;
+        top: 80px;
+        @media screen and (max-width:1200px) {
+          width: 400px;
+          height: 100px;
+          position: absolute;
+          right: 50px;
+          top: 50px;
+        }
+        @media screen and (max-width:768px) {
+          width: 300px;
+          height: 200px;
+          position: absolute;
+          right: 50px;
+          top: 50px;
+        }
+        @media screen and (max-width:600px) {
+          width: 400px;
+          height: 100px;
+          position: absolute;
+          right: 100px;
+          margin-top: 200px;
+        }
+        h3 {
+          font-size: $c2-text-s4;
+          font-weight: $c1-text-w;
+          color: $c2-text-c;
+          @media screen and (max-width:600px) {
+            font-size: $c3-text-s2;
+          }
+        }
+        p {
+          padding: 0 30px 0 0;
+          font-size: $c3-text-s2;
+          font-weight: $c1-text-w;
+          color: $c2-text-c;
+          @media screen and (max-width:600px) {
+            font-size: $c1-text-s;
+          }
+        }
+        button {
+          border: none;
+          padding: 10px 20px;
+          background-color: $c3-bg-c;
+          color: $c1-text-c;
+          font-size: $c3-text-s2;
+          font-weight: $c1-text-w;
+        }
+      }
+    }
+  }
+}
+
+.product-future {
+  .container {
+    h1 {
+      background: linear-gradient(#f21299, #1b02b5);
+      padding: 7px 20px;
+      color: $c1-text-c;
+    }
+    .row {
+      .col-4 { 
+        @media screen and (max-width:600px ) {
+          flex: 0 0 auto;
+          width: 50%;
+        }
+      }
+      .card {
+        .card-body {
+          p {
+            height: 60px;
+            @media screen and (max-width:600px) {
+              font-size: $c1-text-s;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.col-button {
+  // display: flex;
+  .btn-buy {
+    // display: block;
+    padding: 10px 20px;
+    width: 175px;
+    background-color: $c1-bgbt-c;
+    font-weight: $c3-text-w;
+    font-size: $c4-text-s2-4;
+
+    line-height: 29.05px;
+    @media screen and (max-width:768px) {
+      width: 175px;
+      background-color: $c1-bgbt-c;
+      font-weight: $c3-text-w;
+      font-size: $c1-text-s;
+
+      line-height: 29.05px;
+    }
+    @media screen and (max-width:600px) {
+      width: 175px;
+      background-color: $c1-bgbt-c;
+      font-weight: $c3-text-w;
+      font-size: $c1-text-s;
+
+      // line-height: 29.05px;
+    }
+  }
+  .btn-price {
+    padding: 6px 20px;
+    // display: block;
+    background-color: $c2-bgbt-c;
+    width: 160px;
+    font-weight: $c4-text-w;
+    font-size: $c4-text-s2-4;
+    margin-left: -4px;
+    @media screen and (max-width:768px) {
+      font-size: $c1-text-s;
+    }
+  }
+}
+footer {
+  margin-top: 100px;
+  img {
+    width: 100%;
+  }
+}

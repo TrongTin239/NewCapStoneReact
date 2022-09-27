@@ -1,0 +1,100 @@
+.container {
+  p {
+  }
+  form {
+    input {
+      padding-left: 10px;
+      outline: none;
+      width: 300px;
+    }
+    button {
+      background-color: $c4-bgbt-c;
+      padding: 8px 15px;
+      border-radius: 20px;
+      color: $c1-text-c;
+    }
+  }
+  .mt-5 {
+    h2 {
+      background: linear-gradient(#f21299, #1b02b5);
+      padding: 7px 20px;
+      color: $c1-text-c;
+    }
+    .row {
+      p {
+      }
+      .col-3 {
+        margin-left: 10px;
+        background-color: rgba(33, 33, 33, 0.08);
+        padding: 5px;
+        .icon {
+          cursor: pointer;
+        }
+      }
+      .col-4 {
+        @media screen and (max-width:600px ) {
+          flex: 0 0 auto;
+          width: 50%;
+        }
+      }
+      .card {
+        .card-body {
+          margin-bottom: 10px;
+          p.h3 {
+            height: 60px;
+            @media screen and (max-width:768px) {
+              font-size: $c3-text-s2;
+              height: 40px;
+             
+            }
+            @media screen and (max-width:600px) {
+              font-size: $c1-text-s;
+              height: 40px;
+            }
+          }
+        }
+        .col-button {
+          // display: flex;
+          .btn-buy {
+            // display: block;
+            padding: 10px 20px;
+            width: 175px;
+            background-color: $c1-bgbt-c;
+            font-weight: $c3-text-w;
+            font-size: $c4-text-s2-4;
+
+            line-height: 29.05px;
+            @media screen and (max-width:768px) {
+              width: 175px;
+              background-color: $c1-bgbt-c;
+              font-weight: $c3-text-w;
+              font-size: $c1-text-s;
+
+              line-height: 29.05px;
+            }
+            @media screen and (max-width:600px) {
+              width: 175px;
+              background-color: $c1-bgbt-c;
+              font-weight: $c3-text-w;
+              font-size: $c1-text-s;
+
+              // line-height: 29.05px;
+            }
+          }
+          .btn-price {
+            padding: 6px 20px;
+            // display: block;
+            background-color: $c2-bgbt-c;
+            width: 160px;
+            font-weight: $c4-text-w;
+            font-size: $c4-text-s2-4;
+            margin-left: -4px;
+            @media screen and (max-width:768px) {
+              font-size: $c1-text-s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

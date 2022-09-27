@@ -1,0 +1,53 @@
+.container{
+  .table {
+    thead {
+      background-color: $c5-bg-c;
+      tr {
+  
+        th {
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          button.plus {
+            width: 25px;
+            height: 25px;
+            // padding: 8px;
+            color: $c6-text-c;
+            font-size: $c1-text-s;
+  
+            // background-image: linear-gradient(#6181f3 100% );
+            background-color: $c3-bgbt-c;
+          }
+          button.minus {
+            width: 25px;
+            height: 25px;
+            // padding: 8px;
+            color: $c6-text-c;
+            font-size: $c1-text-s;
+  
+            // background-image: linear-gradient(#6181f3 100% );
+            background-color: $c3-bgbt-c;
+          }
+          span.quantity {
+            background-color: $c5-bg-c;
+          }
+          button.edit{
+              background-color: $c4-bgbt-c;
+              
+  
+          }
+        }
+      }
+    }
+  }
+ form{
+  .btn.btn-warning{
+   &:hover{
+    color: $c6-text-c;
+   }
+  }
+ }
+}

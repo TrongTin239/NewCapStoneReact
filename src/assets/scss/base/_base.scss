@@ -1,0 +1,44 @@
+@import "../Themes/variable";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+}
+img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+button {
+  border: none;
+}
+a:hover {
+  color:$c1-text-c ;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: $c1-text-c;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+
+
+.logout:hover {
+  font-weight: 500;
+}
