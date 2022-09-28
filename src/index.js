@@ -16,10 +16,9 @@ import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Profile from "./pages/Profile/Profile";
 import Index from "./pages/Index/Index";
-import "./assets/style.scss";
 import "./assets/scss/style.scss";
 import Detail from "./pages/Detail/Detail";
-import Search from "./pages/Search/Search"
+import Search from "./pages/Search/Search";
 import Carts from "./pages/Carts/Carts";
 export const history = createBrowserHistory({ window });
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -29,12 +28,12 @@ root.render(
       <Routes>
         <Route path="" element={<App />}>
           <Route index path="" element={<Index />}></Route>
-          <Route path="detail">
+          <Route path="/detail">
             <Route path=":id" element={<Detail />}></Route>
           </Route>
-          <Route path="search" element={<Search />} />
+          <Route path="/search" element={<Search />} />
 
-          <Route path="carts" element={<Carts />} />
+          <Route path="/carts" element={<Carts />} />
 
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>

@@ -19,10 +19,6 @@ li {
 button {
   border: none;
 }
-a:hover {
-  color:$c1-text-c ;
-}
-
 
 a {
   text-decoration: none;
@@ -37,8 +33,12 @@ ul {
   list-style: none;
 }
 
-
-
 .logout:hover {
   font-weight: 500;
+}
+
+.navlink-hover {
+  &:hover {
+    color: gray;
+  }
 }

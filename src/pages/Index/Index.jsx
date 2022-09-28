@@ -22,7 +22,7 @@ export default function Carousel() {
   );
 
   const arrFavourite = productsFavorite.productsFavorite;
-  console.log(arrFavourite)
+  console.log(arrFavourite);
   // for (let i = 0; i < arrFavourite.length; i++) {
   //   console.log(arrFavourite[i].id);
   // }
@@ -72,53 +72,50 @@ export default function Carousel() {
   };
   const renderProductFuture = () => {
     return arrProduct?.map((prod, index) => {
-      
-        return (
-          <div key={index} className="col-4 mt-5">
-            <div className="card">
-              <img
-                className="w-50"
-                src={prod.image}
-                alt="..."
-                style={{ marginLeft: "50%", transform: "translateX(-50%)" }}
-              />
-              <i
-                id={`iconFavourite` + index}
-                className="fa-regular  fa-heart"
-                style={{
-                  width: "40px",
-                  position: "absolute",
-                  right: 0,
-                  margin: "15px",
-                  cursor: "pointer",
-                  color: "red",
-                  fontSize: "30px",
-                }}
-                onClick={() => {
-                  setFavourite(index);
-                  getProductsFavorite(prod.id);
-                }}
-              ></i>
-              <div className="card-body">
-                <p className="h3"> {prod.name} </p>
-                <p style={{ height: "50px" }}>{prod.shortDescription}</p>
-              </div>
-              <div className="p-2 col-button d-flex">
-                <NavLink
-                  className=" w-50 btn-buy text-center"
-                  to={`detail/${prod.id}`}
-                >
-                  Buy now
-                </NavLink>
-                <button className=" w-50 btn-price">{prod.price}$</button>
-              </div>
+      return (
+        <div key={index} className="col-4 mt-5">
+          <div className="card">
+            <img
+              className="w-50"
+              src={prod.image}
+              alt="..."
+              style={{ marginLeft: "50%", transform: "translateX(-50%)" }}
+            />
+            <i
+              id={`iconFavourite` + index}
+              className="fa-regular  fa-heart"
+              style={{
+                width: "40px",
+                position: "absolute",
+                right: 0,
+                margin: "15px",
+                cursor: "pointer",
+                color: "red",
+                fontSize: "30px",
+              }}
+              onClick={() => {
+                setFavourite(index);
+                getProductsFavorite(prod.id);
+              }}
+            ></i>
+            <div className="card-body">
+              <p className="h3"> {prod.name} </p>
+              <p style={{ height: "50px" }}>{prod.shortDescription}</p>
+            </div>
+            <div className="p-2 col-button d-flex">
+              <NavLink
+                className=" w-50 btn-buy text-center"
+                to={`detail/${prod.id}`}
+              >
+                Buy now
+              </NavLink>
+              <button className=" w-50 btn-price">{prod.price}$</button>
             </div>
           </div>
-        );
-      }
-    );
+        </div>
+      );
+    });
   };
- 
 
   return (
     <div className="container">

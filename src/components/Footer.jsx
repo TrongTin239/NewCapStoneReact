@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -11,24 +12,40 @@ export default function Footer() {
           <p className="text-uppercase fw-bold">get help</p>
           <ul>
             <li>
-              <a href="#" style={{ fontWeight: 500 }}>
+              <NavLink
+                className="navlink-hover"
+                to="/index"
+                style={{ fontWeight: 500 }}
+              >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" style={{ fontWeight: 500 }}>
+              <NavLink
+                className="navlink-hover"
+                to="/"
+                style={{ fontWeight: 500 }}
+              >
                 Nike
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" style={{ fontWeight: 500 }}>
+              <NavLink
+                className="navlink-hover"
+                to="/"
+                style={{ fontWeight: 500 }}
+              >
                 Adidas
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" style={{ fontWeight: 500 }}>
+              <NavLink
+                className="navlink-hover"
+                to="/"
+                style={{ fontWeight: 500 }}
+              >
                 Contact
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -39,24 +56,40 @@ export default function Footer() {
           <p className="text-uppercase fw-bold">support</p>
           <ul>
             <li>
-              <a href="#" style={{ fontWeight: 500 }}>
+              <NavLink
+                className="navlink-hover"
+                to="/"
+                style={{ fontWeight: 500 }}
+              >
                 About
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" style={{ fontWeight: 500 }}>
+              <NavLink
+                className="navlink-hover"
+                to="/"
+                style={{ fontWeight: 500 }}
+              >
                 Contact
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" style={{ fontWeight: 500 }}>
+              <NavLink
+                className="navlink-hover"
+                to="/"
+                style={{ fontWeight: 500 }}
+              >
                 Help
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" style={{ fontWeight: 500 }}>
+              <NavLink
+                className="navlink-hover"
+                to="/"
+                style={{ fontWeight: 500 }}
+              >
                 Phone
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -64,14 +97,22 @@ export default function Footer() {
           <p className="text-uppercase fw-bold">register</p>
           <ul>
             <li>
-              <a href="#" style={{ fontWeight: 500 }}>
+              <NavLink
+                className="navlink-hover"
+                to="/register"
+                style={{ fontWeight: 500 }}
+              >
                 register
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" style={{ fontWeight: 500 }}>
+              <NavLink
+                className="navlink-hover"
+                to="/login"
+                style={{ fontWeight: 500 }}
+              >
                 login
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

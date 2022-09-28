@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import dateFormat from "dateformat";
 
 export default function OrderHistory() {
   const { userLogin } = useSelector((state) => state.userReducer);
@@ -13,7 +14,7 @@ export default function OrderHistory() {
                 color: "#90159b",
               }}
             >
-              + Orders have been placed on {item.date}
+              + Orders have been placed on {dateFormat(item.date, "mm-dd-yyyy")}
             </p>
             <table className="table ">
               <thead style={{ backgroundColor: "#D9D9D9" }}>
