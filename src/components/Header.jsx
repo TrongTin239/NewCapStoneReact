@@ -101,6 +101,7 @@ export default function Header() {
               <li className="nav-item">
                 <div className="nav-link text-light">
                   <FontAwesomeIcon
+                    style={{ cursor: "pointer" }}
                     icon={faShoppingCart}
                     onClick={() => {
                       checkLogin();

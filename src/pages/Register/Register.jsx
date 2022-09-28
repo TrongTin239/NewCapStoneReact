@@ -6,7 +6,8 @@ import { signupApi } from "../../redux/reducers/userReducer";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Register() {
-  
+  const { messRegister } = useSelector((state) => state.userReducer);
+  console.log(messRegister);
   const dispatch = useDispatch();
 
   const phoneRegex = RegExp(
@@ -55,7 +56,14 @@ export default function Register() {
     <div className="container my-5 px-5">
       <h2>Register</h2>
       <hr />
-      <form className="row" onSubmit={frm.handleSubmit}>
+      {messRegister ? (
+        <span className="text-danger " style={{ fontSize: 30 }}>
+          {messRegister.message}
+        </span>
+      ) : (
+        ""
+      )}
+      <form className="row my-2" onSubmit={frm.handleSubmit}>
         <div className="col-6">
           <div className="form-group">
             <p>Email</p>

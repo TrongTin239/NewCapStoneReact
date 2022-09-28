@@ -29,10 +29,17 @@ const userReducer = createSlice({
     getMessageLoginAction: (state, action) => {
       state.messLogin = action.payload;
     },
+    getMessageRegisterAction: (state, action) => {
+      state.messRegister = action.payload;
+    },
   },
 });
 
-export const { getProfileAction, getMessageLoginAction } = userReducer.actions;
+export const {
+  getProfileAction,
+  getMessageLoginAction,
+  getMessageRegisterAction,
+} = userReducer.actions;
 
 export default userReducer.reducer;
 
@@ -48,6 +55,7 @@ export const signupApi = (userData) => {
       history.push("/login");
     } catch (err) {
       console.log(err.response.data.message);
+      dispatch(getMessageRegisterAction(err.response.data));
     }
   };
 };
@@ -66,10 +74,9 @@ export const loginApi = (userLogin) => {
 
       history.push("/profile");
       dispatch(getProfileApi());
-      
     } catch (err) {
       console.log(err.response.data.message);
-      dispatch(getMessageLoginAction( err.response.data));
+      dispatch(getMessageLoginAction(err.response.data));
     }
   };
 };
