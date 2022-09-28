@@ -31,7 +31,7 @@ export default function Login() {
     <form className="container my-5 px-5" onSubmit={frm.handleSubmit}>
       <h2>Login</h2>
       <hr />
-      <div className="w-50 m-auto">
+      <div className="lg-w-50 m-auto">
         {messLogin ? (
           <span className="text-danger " style={{ fontSize: 30 }}>
             {messLogin.message}
@@ -72,13 +72,16 @@ export default function Login() {
             ""
           )}
         </div>
-        <div className="form-group mt-4 d-flex justify-content-end align-items-center">
-          <NavLink className="nav-link text-primary fw-bold " to="/register">
+        <div className="form-group mt-4 d-flex justify-content-between align-items-center">
+          <NavLink
+            className="nav-link text-primary fw-bold mx-auto"
+            to="/register"
+          >
             Register now?
           </NavLink>
-          <div className="mx-5"></div>
+          <div className=""></div>
           <button
-            className="btn text-uppercase text-white px-3  rounded-pill ms-5"
+            className="btn text-uppercase text-white rounded-pill"
             style={{ backgroundColor: "#6200EE" }}
             type="submit"
           >

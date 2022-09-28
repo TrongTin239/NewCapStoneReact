@@ -16,33 +16,35 @@ export default function OrderHistory() {
             >
               + Orders have been placed on {dateFormat(item.date, "mm-dd-yyyy")}
             </p>
-            <table className="table ">
+            <table className="table w-100">
               <thead style={{ backgroundColor: "#D9D9D9" }}>
                 <tr>
-                  <th>id</th>
-                  <th>img</th>
-                  <th>name</th>
-                  <th>price</th>
-                  <th>quantity</th>
-                  <th>total</th>
+                  <th className="responsive-text">id</th>
+                  <th className="responsive-text">img</th>
+                  <th className="responsive-text">name</th>
+                  <th className="responsive-text">price</th>
+                  <th className="responsive-text">quantity</th>
+                  <th className="responsive-text">total</th>
                 </tr>
               </thead>
               <tbody>
                 {item.orderDetail.map((product, index) => {
                   return (
                     <tr key={index}>
-                      <td>{product.id}</td>
+                      <td className="responsive-text">{product.id}</td>
                       <td>
                         <img
+                          className="responsive-img"
                           src={product.image}
                           alt="shoes"
-                          style={{ width: 85 }}
                         />
                       </td>
-                      <td>{product.name}</td>
-                      <td>{product.price}</td>
-                      <td>{product.quantity}</td>
-                      <td>{product.price * product.quantity}</td>
+                      <td className="responsive-text">{product.name}</td>
+                      <td className="responsive-text">{product.price}</td>
+                      <td className="responsive-text">{product.quantity}</td>
+                      <td className="responsive-text">
+                        {product.price * product.quantity}
+                      </td>
                     </tr>
                   );
                 })}

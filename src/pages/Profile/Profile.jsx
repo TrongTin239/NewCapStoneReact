@@ -47,7 +47,7 @@ export default function Profile() {
   return (
     <div className="container my-5">
       <h4
-        className="w-50 px-4 py-2  text-white"
+        className="w-50 px-4 py-2 text-white"
         style={{
           background: "linear-gradient(180deg, #F21299 0%, #1B02B5 100%",
         }}
@@ -67,11 +67,11 @@ export default function Profile() {
           />
         </div>
         <div className="ms-5 row w-75">
-          <div className="col-6">
+          <div className="col-sm-6">
             <div className="form-group">
               <p>Email</p>
               <input
-                className="form-control"
+                className="form-control w-100"
                 id="email"
                 name="name"
                 placeholder={userLogin?.email}
@@ -81,7 +81,7 @@ export default function Profile() {
             <div className="form-group mt-3">
               <p>Phone</p>
               <input
-                className="form-control"
+                className="form-control w-100"
                 id="phone"
                 name="phone"
                 placeholder={userLogin?.phone}
@@ -95,11 +95,11 @@ export default function Profile() {
               )}
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-sm-6">
             <div className="form-group">
               <p>Name</p>
               <input
-                className="form-control"
+                className="form-control w-100"
                 id="name"
                 name="name"
                 placeholder={userLogin?.name}
@@ -115,7 +115,7 @@ export default function Profile() {
             <div className="form-group mt-3">
               <p>Password</p>
               <input
-                className="form-control"
+                className="form-control w-100"
                 id="password"
                 name="password"
                 onChange={frm.handleChange}
@@ -127,9 +127,12 @@ export default function Profile() {
                 ""
               )}
             </div>
-            <div className="form-group mt-3 d-flex">
-              <span>Gender</span>
-              <div role="group" className="d-flex align-items-center">
+            <div className="form-group row mt-3">
+              <span className="col-sm-2">Gender</span>
+              <div
+                role="group"
+                className="mt-2 mt-sm-0 col-sm-10 d-flex align-items-center"
+              >
                 <div className="ms-4 d-flex flex-column">
                   <input
                     type="radio"

@@ -1,7 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
 import { signupApi } from "../../redux/reducers/userReducer";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -64,11 +63,11 @@ export default function Register() {
         ""
       )}
       <form className="row my-2" onSubmit={frm.handleSubmit}>
-        <div className="col-6">
+        <div className="col-sm-6 pe-sm-5">
           <div className="form-group">
             <p>Email</p>
             <input
-              className="form-control"
+              className="form-control w-100"
               id="email"
               name="email"
               onChange={frm.handleChange}
@@ -83,7 +82,7 @@ export default function Register() {
           <div className="form-group mt-2">
             <p>Password</p>
             <input
-              className="form-control"
+              className="form-control w-100"
               type="password"
               id="password"
               name="password"
@@ -99,7 +98,7 @@ export default function Register() {
           <div className="form-group mt-2">
             <p>Password confirm</p>
             <input
-              className="form-control"
+              className="form-control w-100"
               type="password"
               id="passwordConfirm"
               name="passwordConfirm"
@@ -113,11 +112,11 @@ export default function Register() {
             )}
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-sm-6 ps-sm-5">
           <div className="form-group">
             <p>Name</p>
             <input
-              className="form-control"
+              className="form-control w-100"
               id="name"
               name="name"
               onChange={frm.handleChange}
@@ -132,7 +131,7 @@ export default function Register() {
           <div className="form-group mt-2">
             <p>Phone</p>
             <input
-              className="form-control"
+              className="form-control w-100"
               id="phone"
               name="phone"
               onChange={frm.handleChange}
@@ -144,10 +143,13 @@ export default function Register() {
               ""
             )}
           </div>
-          <div className="form-group mt-4 d-flex align-items-center">
-            <span>Gender</span>
-            <div role="group" className="d-flex align-items-center">
-              <div className="ms-4 d-flex flex-column">
+          <div className="form-group mt-4 row align-items-center">
+            <span className="col-sm-2">Gender</span>
+            <div
+              role="group"
+              className="col-sm-10 mt-2 mt-sm-0 d-flex align-items-center"
+            >
+              <div className="ms-sm-4 d-flex flex-column">
                 <input
                   type="radio"
                   name="gender"
