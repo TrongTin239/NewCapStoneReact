@@ -26,7 +26,7 @@ export default function Carts() {
   };
   const renderCarts = () => {
     // console.log(carts.productOrder);
-    
+
     return carts.productOrder?.map((prod, index) => {
       // console.log(carts.productOrder.length);
       // let quantity = prod.quantityOrder;
@@ -86,7 +86,7 @@ export default function Carts() {
   };
   const submitOrder = async () => {
     let productOrder = JSON.parse(localStorage.getItem("orderProduct"));
-    if (!productOrder) {
+    if (!productOrder || productOrder.length ===0) {
       return alert("Vui lòng chọn sản phẩm bạn muốn đặt hàng");
     }
     let orderDetail = [...productOrder];

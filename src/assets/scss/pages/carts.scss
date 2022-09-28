@@ -1,9 +1,8 @@
-.container{
+.container {
   .table {
     thead {
       background-color: $c5-bg-c;
       tr {
-  
         th {
         }
       }
@@ -11,13 +10,14 @@
     tbody {
       tr {
         td {
+          
           button.plus {
             width: 25px;
             height: 25px;
             // padding: 8px;
             color: $c6-text-c;
             font-size: $c1-text-s;
-  
+
             // background-image: linear-gradient(#6181f3 100% );
             background-color: $c3-bgbt-c;
           }
@@ -27,27 +27,38 @@
             // padding: 8px;
             color: $c6-text-c;
             font-size: $c1-text-s;
-  
+
             // background-image: linear-gradient(#6181f3 100% );
             background-color: $c3-bgbt-c;
           }
           span.quantity {
             background-color: $c5-bg-c;
           }
-          button.edit{
-              background-color: $c4-bgbt-c;
-              
-  
+          button.edit {
+            background-color: $c4-bgbt-c;
+          }
+        }
+        td.action {
+          @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            button.edit,
+            button.btn-danger {
+              width: 60px;
+              font-size: 12px;
+              margin-bottom: 5px;
+            }
           }
         }
       }
     }
   }
- form{
-  .btn.btn-warning{
-   &:hover{
-    color: $c6-text-c;
-   }
+  form {
+    .btn.btn-warning {
+      &:hover {
+        color: $c6-text-c;
+      }
+    }
   }
- }
 }

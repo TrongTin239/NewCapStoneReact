@@ -216,9 +216,25 @@ header {
       }
       .card {
         .card-body {
-          p {
+          p.h3 {
             height: 60px;
-            @media screen and (max-width:600px) {
+            @media screen and (max-width:768px) {
+              font-size: $c3-text-s2;
+              height: 30px;
+              margin-bottom: 20px;
+            }
+            @media screen and (max-width:586px) {
+              font-size: $c1-text-s;
+              height: 30px;
+            }
+          }
+          p{
+            @media screen and (max-width:768px) {
+              font-size: $c1-text-s;
+              height: 30px;
+              margin-top: 5px;
+            }
+            @media screen and (max-width:586px) {
               font-size: $c1-text-s;
               height: 30px;
             }
@@ -244,7 +260,7 @@ header {
       width: 175px;
       background-color: $c1-bgbt-c;
       font-weight: $c3-text-w;
-      font-size: $c1-text-s;
+      font-size: 15px;
 
       line-height: 29.05px;
     }

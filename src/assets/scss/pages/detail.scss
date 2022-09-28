@@ -34,7 +34,7 @@
       }
       .product-info {
         width: 400px;
-        flex: 0 0 60%;
+        flex: 1 1 60%;
         @media screen and (max-width: 768px) {
        
         }
@@ -65,6 +65,7 @@
             font-weight: $c4-text-w;
             font-size: $c4-text-s2-4;
             color: $c4-text-c;
+            margin: 5px 0;
           }
         }
         .price {

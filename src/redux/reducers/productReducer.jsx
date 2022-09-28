@@ -77,6 +77,14 @@ const productReducer = createSlice({
         "orderProduct",
         JSON.stringify(state.carts.productOrder)
       );
+    
+      let productCart = getStore("orderProduct");
+      console.log(productCart)
+      let emptyArray = [];
+      if (productCart?.length === 0) {
+        console.log("không có sản phẩm");
+        localStorage.removeItem("orderProduct")
+      }
     },
     clearCartsAction: (state, action) => {
       state.carts.productOrder = action.payload;
