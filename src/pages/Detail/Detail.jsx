@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, NavLink, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import {
   getProductDetail,
   getProductToCartAction,
-  quantityAction,
 } from "../../redux/reducers/productReducer";
 
 export default function Detail() {
@@ -44,7 +43,7 @@ export default function Detail() {
   const renderRealateProduct = () => {
     return productDetail.relatedProducts?.map((prod, index) => {
       return (
-        <div key={index} className="col-4 mt-5">
+        <div key={index} className="col-12 col-sm-6 col-md-4 mt-5">
           <div className="card">
             <img
               className="w-50"
@@ -72,7 +71,6 @@ export default function Detail() {
       );
     });
   };
-  const renderDetailProduct = () => {};
   const pushToCart = () => {
     const action = getProductToCartAction(newProductDetail);
     dispatch(action);
@@ -81,10 +79,14 @@ export default function Detail() {
     <div className="detail ">
       <div className="container">
         <div className="main">
-          <div className=" img ">
-            <img className="w-100" src={productDetail.image} alt="" />
+          <div className="img ms-0 ms-sm-5">
+            <img
+              className="w-100 ps-0 ps-sm-2"
+              src={productDetail.image}
+              alt=""
+            />
           </div>
-          <div className=" ms-5 product-info  ">
+          <div className="ms-0 ms-sm-5 product-info w-100">
             <h3 className="product-name">{productDetail.name}</h3>
             <span>{productDetail.description}</span>
             <div className="size">
@@ -93,10 +95,6 @@ export default function Detail() {
               {renderSize()}
             </div>
             <div className="price">{productDetail.price}$</div>
-            {/* <button className="btn btn-secondary">42</button>
-          <button className="btn btn-secondary">42</button>
-          <button className="btn btn-secondary">42</button>
-          <button className="btn btn-secondary">42</button> */}
             <div className="amount my-3">
               <button
                 className="plus"

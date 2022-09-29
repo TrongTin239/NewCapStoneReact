@@ -2,8 +2,9 @@
   width: 400px;
   height: 400px;
   position: absolute;
-  right: 160px;
+  /* right: 160px; */
   top: 80px;
+  left: 160px;
 }
 .carousel .carousel-inner .carousel-item .item-info h3 {
   font-size: 40px;

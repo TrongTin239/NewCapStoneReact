@@ -10,6 +10,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media screen and (max-width: 600px) {
+        display: block;
+      }
       .img {
         cursor: pointer;
         position: relative;
@@ -25,9 +28,6 @@
           height: auto;
         }
         @media screen and (max-width: 600px) {
-        }
-        img {
-          margin-left: 50px;
           display: block;
           width: 100%;
         }
@@ -57,6 +57,9 @@
             color: $c3-text-c;
             font-size: $c4-text-s2-4;
             font-weight: $c5-text-w;
+            @media screen and (max-width: 400px) {
+              font-size: $c1-text-s;
+            }
           }
           button {
             padding: 10px;
@@ -65,12 +68,18 @@
             font-size: $c4-text-s2-4;
             color: $c4-text-c;
             margin: 5px 0;
+            @media screen and (max-width: 400px) {
+              font-size: 12px;
+            }
           }
         }
         .price {
           color: $c5-text-c;
           font-weight: $c4-text-w;
           font-size: $c3-text-s3;
+          @media screen and (max-width: 400px) {
+            font-size: $c1-text-s;
+          }
         }
         .amount {
           margin-bottom: 20px;
@@ -84,14 +93,19 @@
             color: $c6-text-c;
             font-size: $c2-text-s4;
             line-height: 50px;
-            // background-image: linear-gradient(#6181f3 100% );
             background-color: $c3-bgbt-c;
+            @media screen and (max-width: 400px) {
+              font-size: $c1-text-s;
+            }
           }
           p {
             display: inline;
             margin: 0;
             font-weight: $c2-text-w;
             font-size: $c2-text-s4;
+            @media screen and (max-width: 400px) {
+              font-size: $c1-text-s;
+            }
           }
           .minus {
             width: 50px;
@@ -100,18 +114,20 @@
             font-size: $c2-text-s4;
             line-height: 50px;
             background-color: $c3-bgbt-c;
+            @media screen and (max-width: 400px) {
+              font-size: $c1-text-s;
+            }
           }
         }
         .add-cart {
           display: inline-block;
           padding: 15px 35px;
-          //   background-image: linear-gradient(to right, #3e20f8);
           background-image: linear-gradient(120deg, #d017ee, #3e20f8);
-
-          // color: $c1-text-c;
-
           &:hover {
             color: $c1-text-c;
+          }
+          @media screen and (max-width: 400px) {
+            font-size: $c1-text-s;
           }
         }
       }

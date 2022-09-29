@@ -19,6 +19,10 @@
 
 .avatar-img {
   width: 200px;
+  @media screen and (max-width: 800px) {
+    margin: auto;
+    width: 150px;
+  }
   @media screen and (max-width: 600px) {
     margin: auto;
     width: 100px;
