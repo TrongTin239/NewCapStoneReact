@@ -27,15 +27,21 @@ export default function Carts() {
     return carts.productOrder?.map((prod, index) => {
       return (
         <tr key={index} className="">
-          <td>{prod.id}</td>
+          <td className="text">{prod.id}</td>
           <td>
-            <img src={prod.image} alt=".." width={100} height={100} />
+            <img
+              className="shoes"
+              src={prod.image}
+              alt=".."
+              width={100}
+              height={100}
+            />
           </td>
-          <td> {prod.name}</td>
-          <td>{prod.price}$</td>
-          <td className="d-flex">
+          <td className="text"> {prod.name}</td>
+          <td className="text">{prod.price}$</td>
+          <td className="">
             <button
-              className="plus"
+              className="btn btn-primary plus-minus p-1"
               onClick={() => {
                 const action = getProductToCartAction(prod);
                 dispatch(action);
@@ -43,9 +49,11 @@ export default function Carts() {
             >
               +
             </button>
-            <span className=" quantity px-4 mx-1 ">{prod.quantityOrder}</span>
+            <span className=" quantity shoes-img px-2 mx-1">
+              {prod.quantityOrder}
+            </span>
             <button
-              className="minus"
+              className="btn btn-primary plus-minus p-1"
               onClick={() => {
                 if (prod.quantityOrder > 1) {
                   handleDecreaseCart(prod);
@@ -57,11 +65,11 @@ export default function Carts() {
               -
             </button>
           </td>
-          <td>{prod.price * `${prod.quantityOrder}`}$</td>
-          <td className="d-flex action">
-            <button className="btn edit mx-2">Edit</button>
+          <td className="text">{prod.price * `${prod.quantityOrder}`}$</td>
+          <td className="action">
+            <button className="btn edit me-2 text">Edit</button>
             <button
-              className="btn btn-danger"
+              className="btn btn-danger text"
               onClick={() => {
                 deleteProduct(prod.id);
               }}
@@ -116,19 +124,19 @@ export default function Carts() {
     dispatch(action);
   };
   return (
-    <div className="container">
+    <div className="container my-4">
       <h2>Carts</h2>
 
       <table className="table">
         <thead className="">
           <tr>
-            <th>id</th>
-            <th>img</th>
-            <th>name</th>
-            <th>price</th>
-            <th>quantity</th>
-            <th>total</th>
-            <th>action</th>
+            <th className="text">id</th>
+            <th className="text">img</th>
+            <th className="text">name</th>
+            <th className="text">price</th>
+            <th className="text px-3">quantity</th>
+            <th className="text">total</th>
+            <th className="text">action</th>
           </tr>
         </thead>
         <tbody>{renderCarts()}</tbody>

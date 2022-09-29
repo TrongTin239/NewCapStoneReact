@@ -4,40 +4,44 @@
       background-color: $c5-bg-c;
       tr {
         th {
+          @media screen and (max-width: 800px) {
+            font-size: 12px;
+          }
         }
       }
     }
     tbody {
       tr {
         td {
-          
-          button.plus {
-            width: 25px;
-            height: 25px;
-            color: $c6-text-c;
-            font-size: $c1-text-s;
-            background-color: $c3-bgbt-c;
-          }
-          button.minus {
-            width: 25px;
-            height: 25px;
-            color: $c6-text-c;
-            font-size: $c1-text-s;
-            background-color: $c3-bgbt-c;
+          button.plus-minus {
+            @media screen and (max-width: 800px) {
+              font-size: 10px;
+            }
           }
           span.quantity {
             background-color: $c5-bg-c;
+            @media screen and (max-width: 800px) {
+              font-size: 12px;
+            }
           }
           button.edit {
             background-color: $c4-bgbt-c;
-            color:white
+            color: white;
+          }
+          img.shoes {
+            width: 85px;
+            @media screen and (max-width: 600px) {
+              width: 60px;
+            }
+          }
+        }
+        .text {
+          @media screen and (max-width: 800px) {
+            font-size: 12px;
           }
         }
         td.action {
           @media screen and (max-width: 768px) {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             button.edit,
             button.btn-danger {
               width: 60px;
