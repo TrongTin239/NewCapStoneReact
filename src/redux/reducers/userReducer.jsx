@@ -50,7 +50,7 @@ export const signupApi = (userData) => {
         method: "POST",
         data: userData,
       });
-      console.log(result.data.content);
+      // console.log(result.data.content);
       history.push("/login");
     } catch (err) {
       console.log(err.response.data.message);
@@ -118,6 +118,26 @@ export const updateProfileApi = (
       });
       console.log(result);
       dispatch(getProfileApi());
+    } catch (err) {
+      console.log(err);
+    }
+  };
+};
+
+export const loginFbApi = (accessToken) => {
+  return async (dispatch) => {
+    try {
+      const result = await axios({
+        url: "https://shop.cyberlearn.vn/api/Users/facebooklogin",
+        method: "post",
+        data: {
+          facebookToken: accessToken,
+        },
+      });
+      console.log(result.data.content);
+      setCookie(ACCESS_TOKEN, result.data.content.accessToken);
+      setStore(ACCESS_TOKEN, result.data.content.accessToken);
+      history.push("/profile");
     } catch (err) {
       console.log(err);
     }

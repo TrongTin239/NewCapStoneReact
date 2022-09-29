@@ -22,7 +22,7 @@ export default function Carousel() {
   );
 
   const arrFavourite = productsFavorite.productsFavorite;
-  console.log(arrFavourite);
+  // console.log(arrFavourite);
   // for (let i = 0; i < arrFavourite.length; i++) {
   //   console.log(arrFavourite[i].id);
   // }

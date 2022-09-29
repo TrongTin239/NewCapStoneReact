@@ -13,7 +13,7 @@ export default function Carts() {
   const { carts } = useSelector((state) => state.productReducer);
   const { userLogin } = useSelector((state) => state.userReducer);
   const email = userLogin.email;
-  console.log(carts);
+  // console.log(carts);
   const arr = [];
   let quantity = carts.productOrder?.map((item) => {
     return item.quantityOrder;
@@ -93,7 +93,7 @@ export default function Carts() {
     // let id = orderDetail?.map((item) => item.id);
     // let quantity = orderDetail?.map((item) => item.quantityOrder);
     // let arrProducrOrder = [];
-    console.log(orderDetail);
+    // console.log(orderDetail);
     const replace = {
       id: "productId",
       quantityOrder: "quantity",
