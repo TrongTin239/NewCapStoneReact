@@ -13,7 +13,6 @@ export default function Carts() {
   const { carts } = useSelector((state) => state.productReducer);
   const { userLogin } = useSelector((state) => state.userReducer);
   const email = userLogin.email;
-  // console.log(carts);
   const arr = [];
   let quantity = carts.productOrder?.map((item) => {
     return item.quantityOrder;
@@ -25,15 +24,9 @@ export default function Carts() {
     dispatch(decreaseCart(id));
   };
   const renderCarts = () => {
-    // console.log(carts.productOrder);
-
     return carts.productOrder?.map((prod, index) => {
-      // console.log(carts.productOrder.length);
-      // let quantity = prod.quantityOrder;
-      // console.log(quantity);
       return (
         <tr key={index} className="">
-          <td></td>
           <td>{prod.id}</td>
           <td>
             <img src={prod.image} alt=".." width={100} height={100} />
@@ -44,7 +37,6 @@ export default function Carts() {
             <button
               className="plus"
               onClick={() => {
-                // console.log(prod.quantityOrder + 1);
                 const action = getProductToCartAction(prod);
                 dispatch(action);
               }}
@@ -67,7 +59,7 @@ export default function Carts() {
           </td>
           <td>{prod.price * `${prod.quantityOrder}`}$</td>
           <td className="d-flex action">
-            <button className=" btn edit mx-2">Edit</button>
+            <button className="btn edit mx-2">Edit</button>
             <button
               className="btn btn-danger"
               onClick={() => {
@@ -86,14 +78,10 @@ export default function Carts() {
   };
   const submitOrder = async () => {
     let productOrder = JSON.parse(localStorage.getItem("orderProduct"));
-    if (!productOrder || productOrder.length ===0) {
+    if (!productOrder || productOrder.length === 0) {
       return alert("Vui lòng chọn sản phẩm bạn muốn đặt hàng");
     }
     let orderDetail = [...productOrder];
-    // let id = orderDetail?.map((item) => item.id);
-    // let quantity = orderDetail?.map((item) => item.quantityOrder);
-    // let arrProducrOrder = [];
-    // console.log(orderDetail);
     const replace = {
       id: "productId",
       quantityOrder: "quantity",
@@ -134,7 +122,6 @@ export default function Carts() {
       <table className="table w-100">
         <thead className="">
           <tr>
-            <th></th>
             <th>id</th>
             <th>img</th>
             <th>name</th>

@@ -67,7 +67,7 @@ export default function Header() {
             <img src="./img/logo.png" alt="logo" />
           </NavLink>
           <button
-            className="navbar-toggler d-lg-none"
+            className="navbar-toggler bg-white"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapsibleNavId"

@@ -2,8 +2,8 @@ import React from "react";
 
 export default function ProductFavorite() {
   return (
-    <div>
-      <h2>Product favorite</h2>
+    <div className="mt-3">
+      <p>List favorite product</p>
     </div>
   );
 }

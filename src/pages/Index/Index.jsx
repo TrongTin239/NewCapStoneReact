@@ -53,7 +53,7 @@ export default function Carousel() {
           key={index}
           className={`  carousel-item  ${prod.id === 1 ? "active" : ""}`}
         >
-          <img src={prod.image} className=" ps-5 w-100%" alt="..." />
+          <img src={prod.image} className="ps-5 w-100%" alt="..." />
           <div className="item-info">
             <h3>{prod.name}</h3>
             <p>{prod.description}</p>
