@@ -5,7 +5,7 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
-import userReducer, { loginApi } from "../../redux/reducers/userReducer";
+import { loginApi } from "../../redux/reducers/userReducer";
 
 export default function Login() {
   const { messLogin } = useSelector((state) => state.userReducer);
@@ -33,7 +33,7 @@ export default function Login() {
       <hr />
       <div className="lg-w-50 m-auto">
         {messLogin ? (
-          <span className="text-danger " style={{ fontSize: 30 }}>
+          <span className="text-danger " style={{ fontSize: 24 }}>
             {messLogin.message}
           </span>
         ) : (

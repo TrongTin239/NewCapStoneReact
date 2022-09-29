@@ -16,7 +16,6 @@ const initialState = {
   userLogin: getStoreJson(USER_LOGIN),
   messRegister: {},
   messLogin: {},
-  messUpdate: {},
 };
 
 const userReducer = createSlice({

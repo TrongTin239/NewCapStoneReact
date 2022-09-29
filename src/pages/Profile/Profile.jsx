@@ -47,7 +47,7 @@ export default function Profile() {
   return (
     <div className="container my-5">
       <h4
-        className="w-50 px-4 py-2 text-white"
+        className="col-12 col-sm-6 px-4 py-2 text-white"
         style={{
           background: "linear-gradient(180deg, #F21299 0%, #1B02B5 100%",
         }}
@@ -55,18 +55,15 @@ export default function Profile() {
         Profile
       </h4>
 
-      <form
-        className="my-5 d-flex align-items-center"
-        onSubmit={frm.handleSubmit}
-      >
-        <div className="form-group w-25 mb-5">
+      <form className="my-5 row" onSubmit={frm.handleSubmit}>
+        <div className="form-group col-12 col-sm-3">
           <img
-            className="w-100 rounded-circle"
+            className="avatar-img rounded-circle"
             src={userLogin?.avatar}
             alt="avatar"
           />
         </div>
-        <div className="ms-5 row w-75">
+        <div className="row col-12 col-sm-9">
           <div className="col-sm-6">
             <div className="form-group">
               <p>Email</p>
@@ -181,7 +178,7 @@ export default function Profile() {
       <nav>
         <div className="nav nav-tabs" id="nav-tab" role="tablist">
           <button
-            className="nav-link active"
+            className="nav-link text-16 active"
             id="nav-history-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-history"
@@ -189,12 +186,12 @@ export default function Profile() {
             role="tab"
             aria-controls="nav-history"
             aria-selected="true"
-            style={{ fontWeight: 400, fontSize: 32 }}
+            style={{ fontWeight: 400 }}
           >
             Order History
           </button>
           <button
-            className="nav-link"
+            className="nav-link text-16"
             id="nav-favorite-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-favorite"
@@ -202,7 +199,7 @@ export default function Profile() {
             role="tab"
             aria-controls="nav-favorite"
             aria-selected="false"
-            style={{ fontWeight: 400, fontSize: 32 }}
+            style={{ fontWeight: 400 }}
           >
             Favorite
           </button>

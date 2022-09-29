@@ -45,7 +45,7 @@ export default function Header() {
         </div>
         <div className="nav-item logout">
           <NavLink
-            className=" nav-link"
+            className="nav-link"
             to="/"
             onClick={() => {
               localStorage.removeItem(ACCESS_TOKEN);

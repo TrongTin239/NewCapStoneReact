@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="container">
       <div className="row">
         <div
-          className="px-5 px-sm-0 ps-sm-5 col-sm-4 "
+          className="px-5 ps-sm-5 col-sm-4 "
           style={{ borderRight: "solid 0.25px rgba(1, 1, 1, 0.2)" }}
         >
           <p className="text-uppercase fw-bold">get help</p>
@@ -50,7 +50,7 @@ export default function Footer() {
           </ul>
         </div>
         <div
-          className="px-5 px-sm-0 ps-sm-5 col-sm-4"
+          className="px-5 ps-sm-5 col-sm-4"
           style={{ borderRight: "solid 0.25px rgba(1, 1, 1, 0.2)" }}
         >
           <p className="text-uppercase fw-bold">support</p>
@@ -93,7 +93,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="px-5 px-sm-0 ps-sm-5 col-sm-4">
+        <div className="px-5 ps-sm-5 col-sm-4">
           <p className="text-uppercase fw-bold">register</p>
           <ul>
             <li>

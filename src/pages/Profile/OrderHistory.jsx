@@ -34,7 +34,7 @@ export default function OrderHistory() {
                       <td className="responsive-text">{product.id}</td>
                       <td>
                         <img
-                          className="responsive-img"
+                          className="shoes-img"
                           src={product.image}
                           alt="shoes"
                         />
