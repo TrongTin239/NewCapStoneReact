@@ -84,15 +84,6 @@ export default function Carousel() {
             <i
               id={`iconFavourite` + index}
               className="fa-regular  fa-heart"
-              style={{
-                width: "40px",
-                position: "absolute",
-                right: 0,
-                margin: "15px",
-                cursor: "pointer",
-                color: "red",
-                fontSize: "30px",
-              }}
               onClick={() => {
                 setFavourite(index);
                 getProductsFavorite(prod.id);
@@ -100,7 +91,7 @@ export default function Carousel() {
             ></i>
             <div className="card-body">
               <p className="h3"> {prod.name} </p>
-              <p style={{ height: "50px" }}>{prod.shortDescription}</p>
+              <p >{prod.shortDescription}</p>
             </div>
             <div className="p-2 col-button d-flex">
               <NavLink

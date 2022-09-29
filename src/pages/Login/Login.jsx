@@ -106,9 +106,9 @@ export default function Login() {
               <span>Continue with Facebook</span>
             </button> */}
             <FacebookLogin
-            data-width="100%"
+              data-width="100%"
               appId="651475096325476"
-              autoLoad={true}
+              autoLoad={false}
               fields="name,email,picture"
               // onClick={(props) => {
               //   return <div> Continue with Facebook</div>;
@@ -118,7 +118,6 @@ export default function Login() {
           </div>
         </div>
       </form>
-      <div className="container "></div>
     </div>
   );
 }

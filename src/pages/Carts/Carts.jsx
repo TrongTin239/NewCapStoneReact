@@ -127,7 +127,7 @@ export default function Carts() {
     <div className="container my-4">
       <h2>Carts</h2>
 
-      <table className="table">
+      <table className="table w-100">
         <thead className="">
           <tr>
             <th className="text">id</th>
