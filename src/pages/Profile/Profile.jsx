@@ -11,8 +11,9 @@ import ProductFavorite from "./ProductFavorite";
 import * as Yup from "yup";
 
 export default function Profile() {
-  const { userLogin } = useSelector((state) => state.userReducer);
-  console.log(userLogin);
+  const { userLogin, messUpdateSuccess } = useSelector(
+    (state) => state.userReducer
+  );
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProfileApi());
@@ -35,12 +36,10 @@ export default function Profile() {
       gender: Yup.string(),
     }),
     onSubmit: (values) => {
-      console.log(values);
       const data = {};
       for (let key in values) {
         data[key] = values[key] ? values[key] : userLogin[key];
       }
-      console.log(data);
       dispatch(updateProfileApi(data));
     },
   });
@@ -55,7 +54,15 @@ export default function Profile() {
         Profile
       </h4>
 
-      <form className="my-5 row" onSubmit={frm.handleSubmit}>
+      {messUpdateSuccess ? (
+        <span className="text-danger">
+          Chỉnh sửa {messUpdateSuccess.toLowerCase()}
+        </span>
+      ) : (
+        ""
+      )}
+
+      <form className="my-2 my-sm-5 row" onSubmit={frm.handleSubmit}>
         <div className="form-group col-12 col-sm-3">
           <img
             className="avatar-img rounded-circle"

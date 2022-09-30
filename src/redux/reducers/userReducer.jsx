@@ -16,6 +16,7 @@ const initialState = {
   userLogin: getStoreJson(USER_LOGIN),
   messRegister: {},
   messLogin: {},
+  messUpdateSuccess: "",
 };
 
 const userReducer = createSlice({
@@ -31,6 +32,9 @@ const userReducer = createSlice({
     getMessageRegisterAction: (state, action) => {
       state.messRegister = action.payload;
     },
+    getMessageUpdateSuccessAction: (state, action) => {
+      state.messUpdateSuccess = action.payload;
+    },
   },
 });
 
@@ -38,6 +42,7 @@ export const {
   getProfileAction,
   getMessageLoginAction,
   getMessageRegisterAction,
+  getMessageUpdateSuccessAction,
 } = userReducer.actions;
 
 export default userReducer.reducer;
@@ -67,7 +72,6 @@ export const loginApi = (userLogin) => {
         method: "POST",
         data: userLogin,
       });
-      console.log(result);
       setCookie(ACCESS_TOKEN, result.data.content.accessToken);
       setStore(ACCESS_TOKEN, result.data.content.accessToken);
 
@@ -81,7 +85,6 @@ export const loginApi = (userLogin) => {
 };
 
 export const getProfileApi = (accessToken = getStore(ACCESS_TOKEN)) => {
-  console.log(accessToken);
   return async (dispatch) => {
     try {
       const result = await axios({
@@ -116,7 +119,7 @@ export const updateProfileApi = (
         },
         data: updateData,
       });
-      console.log(result);
+      dispatch(getMessageUpdateSuccessAction(result.data.content));
       dispatch(getProfileApi());
     } catch (err) {
       console.log(err);
