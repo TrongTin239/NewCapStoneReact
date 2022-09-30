@@ -1,12 +1,10 @@
-@import "./base/base";
-@import "./Themes/variable";
+@import "./base/_base";
+@import "./themes/_variable";
 
 @import "./pages/index.scss";
 @import "./pages/detail.scss";
 @import "./pages/search.scss";
 @import "./pages/carts.scss";
 
-
 //////
- @import "./pages/profile.scss"
-
+@import "./pages/profile.scss";

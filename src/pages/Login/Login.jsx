@@ -25,7 +25,6 @@ export default function Login() {
         .max(10, "Password must be having 3-10 characters!"),
     }),
     onSubmit: (values, action) => {
-      console.log(values);
       dispatch(loginApi(values));
 
       action.resetForm({ values: "" });
