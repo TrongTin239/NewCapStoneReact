@@ -107,7 +107,7 @@ export default function Login() {
             </button> */}
             <FacebookLogin
               data-width="100%"
-              appId="651475096325476"
+              appId="621732836075862"
               autoLoad={false}
               fields="name,email,picture"
               // onClick={(props) => {
