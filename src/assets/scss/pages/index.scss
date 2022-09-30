@@ -225,6 +225,8 @@ header {
       color: $c1-text-c;
     }
     .row {
+
+
       .col-4 {
         @media screen and (max-width: 600px) {
           flex: 0 0 auto;
@@ -243,7 +245,7 @@ header {
 
           @media screen and (max-width: 376px) {
             margin: 3px;
-           font-size: 25px;
+            font-size: 25px;
           }
         }
         .card-body {

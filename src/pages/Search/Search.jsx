@@ -77,11 +77,11 @@ export default function Search() {
     });
   };
   return (
-    <div className="container mt-5">
+    <div className="container mb-5">
       <p>Search</p>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Product name" onChange={handleChange} />
-        <button className="ms-5"> Search</button>
+        <button className=""> Search</button>
       </form>
       <div className="mt-5">
         <h2>Search result</h2>

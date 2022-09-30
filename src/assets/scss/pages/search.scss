@@ -12,6 +12,11 @@
       padding: 8px 15px;
       border-radius: 20px;
       color: $c1-text-c;
+      margin-left: 20px;
+      @media screen and (max-width: 376px) {
+        margin-top: 15px;
+        margin-left: 0;
+      }
     }
   }
   .mt-5 {
@@ -32,7 +37,7 @@
         }
       }
       .col-4 {
-        @media screen and (max-width:600px ) {
+        @media screen and (max-width: 600px) {
           flex: 0 0 auto;
           width: 50%;
         }
@@ -42,16 +47,36 @@
           margin-bottom: 10px;
           p.h3 {
             height: 60px;
-            @media screen and (max-width:768px) {
+            @media screen and (max-width: 768px) {
               font-size: $c3-text-s2;
               height: 40px;
-             
             }
-            @media screen and (max-width:600px) {
+            @media screen and (max-width: 600px) {
               font-size: $c1-text-s;
               height: 40px;
             }
+            @media screen and (max-width: 376px) {
+              font-size: 14px;
+              height: 30px;
+            }
           }
+          p {
+            @media screen and (max-width: 768px) {
+              font-size: $c1-text-s;
+              height: 30px;
+              margin-top: 5px;
+            }
+            @media screen and (max-width: 586px) {
+              font-size: $c1-text-s;
+              height: 30px;
+            }
+            @media screen and (max-width: 376px) {
+              font-size: $c1-text-xs;
+              height: 30px;
+              height: fit-content;
+            }
+          }
+
         }
         .col-button {
           // display: flex;
@@ -64,7 +89,7 @@
             font-size: $c4-text-s2-4;
 
             line-height: 29.05px;
-            @media screen and (max-width:768px) {
+            @media screen and (max-width: 768px) {
               width: 175px;
               background-color: $c1-bgbt-c;
               font-weight: $c3-text-w;
@@ -72,12 +97,21 @@
 
               line-height: 29.05px;
             }
-            @media screen and (max-width:600px) {
+            @media screen and (max-width: 587px) {
               width: 175px;
               background-color: $c1-bgbt-c;
               font-weight: $c3-text-w;
               font-size: $c1-text-s;
 
+              // line-height: 29.05px;
+            }
+            @media screen and (max-width: 376px) {
+              width: 175px;
+              background-color: $c1-bgbt-c;
+              font-weight: $c3-text-w;
+              font-size: 14px;
+              padding: 0;
+              line-height: none;
               // line-height: 29.05px;
             }
           }
@@ -89,8 +123,12 @@
             font-weight: $c4-text-w;
             font-size: $c4-text-s2-4;
             margin-left: -4px;
-            @media screen and (max-width:768px) {
+            @media screen and (max-width: 768px) {
               font-size: $c1-text-s;
+            }
+            @media screen and (max-width: 376px) {
+              font-size: 14px;
+              padding: 0;
             }
           }
         }
